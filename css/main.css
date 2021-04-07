@@ -1,4 +1,9 @@
 div {
-  font-size: 100px;
-  color: aqua;
+  width: 500px;
+  height: 500px;
+  background: url("/images/logo.png");
+}
+a {
+  font-size: 80px;
+  color: green ;
 }
