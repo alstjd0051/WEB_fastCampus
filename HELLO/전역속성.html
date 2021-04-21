@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <script defer src="전역속성.js"></script>
+   <!-- defer :  HTML 구조가 준비도니 후( 문서 분석 이후)에 JS를 해석하겠다는 의미-->
+</head>
+<body>
+  <a href="http://naver.com" target="_blank" title="네이버로 이동">NAVER</a> <br> <!--<태그 title="설명"> </태그> : 요소의 정보나 설명을 지정-->
+  <a href="https://google.com" style="스타일">GOOGLE</a> <br><!-- <태그 style="스타일"> </태그> : 요소에 적용할 스타일(css)을 지정-->
+  <a href="https://google.com" class="이름">GOOGLE</a> <!-- <태그 calss="이름"> </태그> : 요소를 지칭하는 중복 가능한 이름 -->
+  <br>
+  <img src="https://image.ytn.co.kr/general/jpg/2020/1005/202010051110299640_t.jpg" alt="태풍"><br>
+  
+
+
+  <span>동해물</span>과 <span class="yellow">백두산</span>이 <br>
+  마르고 닳도록
+  <br>
+  하느님이 보우하사 <span class="red">우리나라</span> 만세<br>
+  <span>동해물</span>과 <span id="abc">백두산</span>이 마르고 닳도록
+  하느님이 보우하사 <span id="red">우리나라</span> 만세
+  <br>
+  
+  <div data-fruit-name="apple">사과</div>
+  <div data-fruit-name="banana">바나나</div>
+
+
+<br><br><br><br><br>
+
+
+<a href="./index.html">뒤로가기</a>
+
+
+  <style>
+    body {
+      font-size: 50px;
+    }
+    span {
+      color: skyblue;
+    }
+    img {
+      width: 10%;
+      height: 10%;
+    }
+    /* class는 css에서 ."단어" */
+    .red {
+      color: red;
+    }
+    .yellow {
+      color: aquamarine;
+    }
+    /* id는 css에서 #"단어" */
+    #abc {
+      color: beige;
+    }
+
+  </style>
+
+</body>
+</html>

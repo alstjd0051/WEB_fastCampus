@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/main.css"> <!-- 링크 방식 : link로 외부 Css문서를가져와서 연결하는 방식-->
+  <link rel="stylesheet" href="/css/box.css">
+</head>
+
+<body>
+<div>Hello world!</div>
+  
+  
+  <!-- <style>
+    /* 내장방식 : <style>
+    </style>의 내용 (Contents)으로 스타일을 작성하는 방식 */
+    /* div {
+      color: red;
+      margin: 20px;
+    } */
+  </style> -->
+  
+  <style>
+    /*  css의 @import 규칙으로 CSS문서 안에서 또 다른 CSS 문서를 가져와 연결하는 방식 */
+    @import url(./maina.css);
+    .L {
+      color: brown;
+      text-decoration: underline;
+      margin: 50px;
+    }
+
+  </style>
+
+</body>
+
+</html>
