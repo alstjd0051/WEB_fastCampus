@@ -4,18 +4,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>선택자 기본</title>
 </head>
 <body>
   <div>
     <ul>
-      <li>사과</li>
-      <li>딸기</li>
-      <li>오렌지</li>
+      <li id="apple">사과</li>
+      <li id="strobery">딸기</li>
+      <li class="orange">오렌지</li>
     </ul>
     <div>당근</div>
-    <p>토마토</p>
-    <span>오렌지</span>
+    <p id="tomato">토마토</p>
+    <span class="orange">오렌지</span>
   </div>
+
+
+
+
+<style>
+  /* (*) = 기본선택자  - 전체선택자(Universal Selector) : 모든 요소를 선택 */
+  * {
+    color: rgb(38, 175, 61);
+  }
+
+  /* (li) = 기본 태그선택자(Type Selector) : 태그이름이 ABC인요소선택. */
+  li {
+    color: blue;
+  }
+  /* class = 기본클래스 선택자(class Selector) : HTML class 속성의값이 ABC인 요소 선택(.) */
+  .orange {
+    color: orange;
+  }
+  /* (#)기본 아이디 선택자(ID Selector) */
+  #apple {
+    color: red;
+  }
+  #strobery {
+    color: pink;
+  }
+  #tomato {
+    color: tomato;
+  }
+</style>
+
+
+
+  <a href="./index.html">뒤로가기</a>
 </body>
 </html>
