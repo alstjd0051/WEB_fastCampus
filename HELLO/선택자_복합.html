@@ -20,8 +20,16 @@
     <span class="orange">오렌지</span>
   </div>
   <span class="orange">오렌지</span>
+  <ul>
+    <li>딸기</li>
+    <li>수박</li>
+    <li class="lemon">레몬</li>
+    <li class="mango">망고</li>
+    <li>사과</li>
+  </ul>
 
-
+<br><br><br><br><br>
+<a href="./index.html">뒤로가기</a>
   <style>
     /* 복합 | 일치선택자 (Basic Combinator) : 선택자 ABC와 XYZ를 동시에 만족하는 요소 선택  */
 
@@ -29,11 +37,19 @@
       color: orange;
     }
     /* 복합 | 자식선택자 (Child Combinator) : 선택자 ABC의 자식 요소 XYZ 선택  */
-    ul > .orange {
+    ul > .lemon {
       color: yellow;
     }
     /* 복합 | 하위(후손)선택자 (Descendant Combinator) : 선택자 ABC의 하위 요소 XYZ 선택. 띄어쓰기가 선택자의 기호! */
     div .orange {
+      color: red;
+    }
+    /* 복합 | 인접 형제 선택자 (Adjacent Sibling Combinator) */
+    .lemon + li {
+      color: rgb(221, 223, 104);
+    }
+    /* 복합 | 일반 형제 선택자(General Sibling Combinator) */
+    .mango ~ li {
       color: red;
     }
   </style>
