@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="asd.css">
+</head>
+<!-- /yeogiyo/images/megaphone-icon.png -->
+<body>
+  <section id="notice-update-container">
+    <h2><img src="./first/images/notice.png" style="width: 5%;" alt="사장님나이스샷">공지 수정</h2>
+    <hr id="line">
+    <form id="view-info" name="noticeUpdateFrm" action="<%= request.getContextPath() %>/admin/noticeUpdate"
+      enctype="multipart/form-data" method="POST">
+      <input type="hidden" name="noticeNo" value="<%= notice.getNoticeNo() %>" />
+      <input type="hidden" name="resId" value="<%= notice.getResId() %>" />
+      <table id="tbl-notice-update">
+        <tr>
+          <th>제목</th>
+          <td><input type="text" name="noticeTitle" value="<%= notice.getNoticeTitle() %>" required /></td>
+        </tr>
+        <tr>
+          <th>이미지추가</th>
+          <td>
+            <input type="file" name="upImgFile" />
+            <p style="margin: 5px 0;">
+              <img src="<%= request.getContextPath() %>/imges/image-icon.png" width="20px">
+              <input type="checkbox" name="delImgFile" id="delImgFile"
+                value="<%= notice.getNoticeImg().getImgNo() %>" />
+              <label for="delImgFile">이미지 삭제</label>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th>내용</th>
+          <td><textarea name="noticeContent" cols="30" rows="10" ></textarea></td>
+        </tr>
+        <tr>
+          <th colspan="2">
+            <input type="submit" value="수정" />
+            <input type="button" value="취소"
+              onclick="location.href='<%= request.getContextPath() %>/admin/noticeView?resId=<%= notice.getResId() %>'" />
+          </th>
+        </tr>
+      </table>
+
+    </form>
+  </section>
+</body>
+
+</html>
