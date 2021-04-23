@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="fruits">
+    <span>딸기</span>
+    <span>수박</span>
+    <div>오렌지</div>
+    <p>망고</p>
+    <h3>사과</h3>
+  </div>
+
+
+
+
+  <style>
+    /* 
+    ABC:first-child 가상 클래스 선택자(Pseudo-Classes) First child
+    선택자 ABC가 형재 요소중 첫째라면 선택 */
+    .fruits span:first-child {
+      color: red;
+    }
+    /* 
+    ABC:first-child 가상 클래스 선택자(Pseudo-Classes) First child
+    선택자 aBC가 형제 요소중 첫번째라면 선택.
+     */
+    .fruits div:first-child {
+      color: red;
+    }
+    /* 
+    ABC:last-child 가상 클래스 선택자(Pseudo-Classes) LAST CHILD
+    선택자 ABC가 형제 요소중 막내라면 선택
+     */
+    .fruits h3:last-child{
+      color: red;
+    }
+
+    /* 
+    ABC:nth-child 가상 클래스 선택자(Pseudo-Classes) nth CHILD
+    선택자 ABC가 형제 요소 중(n)쨰라면 선택
+     */
+     .fruits *:nth-child(2n+1){
+       color: turquoise;
+     }
+     /*  
+     ABC:not 부정 클래스 선택자(Pseudo-Classes) NOT
+     선택자 XYZ가 아닌 ABC요소선택
+      */
+     .fruits *:not(span) {
+       color: red;
+     }
+  </style>
+
+</body>
+
+</html>
