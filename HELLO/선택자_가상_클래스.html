@@ -7,7 +7,8 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="box"></div>
+  <div class="box" ></div>
+  <input type="text" />
 
 
 
@@ -19,11 +20,42 @@
     background-color: orange;
     transition: 1s;
   }
+  /* 
+  ABC:hover = 가상클래스 선택자(Pseudo-Classes) HOVER
+  선태자 ABC 요소에 마우스 커서가 올라가 있는동안 선택 */
   .box:hover {
     width: 300px;
     height: 200px;
     background-color: skyblue;
   }
+  /* 
+  ABC:active 가상 클래스 선택자(Pseudo-Classes) ACTIVE
+  선택자 ABC요소에 마우스를 클릭하고 있는 동안 선택 */
+  .box:active {
+    width: 300px;
+    background-color: blueviolet;
+  }
+
+
+  input {
+    
+  }
+  /* 
+  ABC:focus 가상 클래스 선택자(Pseudo-Classes) FOCUS
+  선택자 ABC요소가 포커스되면 선택 */
+  input:focus{
+    background-color: rgb(226, 184, 106);
+  }
+
+
+
+/* tabindex는 속성을 통해 Focus가 될 수 있는 요소를 만들 수 있다.
+순서(값)로 "-1"이 아닌 다른 값을 넣는 것은 논리적 흐름을 방해하기 때문에 권장하지 않는다. */
+
+  /* .box:focus {
+    width: 300px;
+    background-color: violet;
+  } */
   </style>
 </body>
 </html>
