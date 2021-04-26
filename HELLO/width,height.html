@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>HELLO</div>
+  <span>World</span>
+  <div>Hello</div>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <!--
+    <span></span>
+    대표적인 인라인 요소
+    본질적으로 아무것도 나타내지 않는 ,콘텐츠 영역을 설정하는 용도.
+  -->
+  <!-- 
+    <div></div>
+    대표적인 블록 요소
+    본질적으로 아무것도 나타내지 않는 ,콘텐츠 영역을 설정하는 용도.
+  -->
+  <style>
+    /* auto : 브러우저가 너비를 계산
+      단위 : px,em,vw등 단위로 지정 */
+    /* 
+    max - width, max-height
+    none - 최대너비 제한없음
+    auto 브라우저가 너비를 계산
+    단위 px,em, vw등 단위로 지정
+     */
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+
+    span {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      font-size: 40px;
+    }
+
+    .parent {
+      width: 300px;
+      height: 200px;
+      background-color: royalblue;
+    }
+    .child {
+      max-width: 300px;
+      height: 100px;
+      background-color: orange;
+    }
+  </style>
+  <br><br><br><br><br><br><br><br><br><br>
+  <a href="css_index.html"></a>
+</body>
+
+</html>
