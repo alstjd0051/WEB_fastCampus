@@ -6,24 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="asd.css">
 </head>
 <!-- /yeogiyo/images/megaphone-icon.png -->
 <body>
-  <section id="notice-update-container">
+  <section>
     <h2><img src="./first/images/notice.png" style="width: 5%;" alt="사장님나이스샷">공지 수정</h2>
     <hr id="line">
     <form id="view-info" name="noticeUpdateFrm" action="<%= request.getContextPath() %>/admin/noticeUpdate"
       enctype="multipart/form-data" method="POST">
       <input type="hidden" name="noticeNo" value="<%= notice.getNoticeNo() %>" />
       <input type="hidden" name="resId" value="<%= notice.getResId() %>" />
-      <table id="tbl-notice-update">
+      <table class="tbl-notice-update">
         <tr>
-          <th>제목</th>
+          <th style="width: 30%; height: 10%;">제목</th>
           <td><input type="text" name="noticeTitle" value="<%= notice.getNoticeTitle() %>" required /></td>
         </tr>
         <tr>
-          <th>이미지추가</th>
+          <th style="width: 30%; height: 10%;">이미지추가</th>
           <td>
             <input type="file" name="upImgFile" />
             <p style="margin: 5px 0;">
@@ -36,9 +35,9 @@
         </tr>
         <tr>
           <th>내용</th>
-          <td><textarea name="noticeContent" cols="30" rows="10" ></textarea></td>
+          <td><textarea name="noticeContent" cols="100" rows="10" ></textarea></td>
         </tr>
-        <tr>
+        <tr style="width: 30%; ">
           <th colspan="2">
             <input type="submit" value="수정" />
             <input type="button" value="취소"
@@ -49,6 +48,11 @@
 
     </form>
   </section>
+  <style>
+    .tbl-notice-update {
+      margin: 5%;
+    }
+  </style>
 </body>
 
 </html>
