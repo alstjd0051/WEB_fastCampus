@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- meta 선언 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여기요</title>
+  <!-- link 선언 -->
+  <link rel="stylesheet" href="header_style.css">
+  <link rel="stylesheet" href="content_style_index.css">
+  <link rel="stylesheet" href="footer_style.css">
+  <link rel="stylesheet" href="login_style.css">
+  <link rel="stylesheet" href="search_style.css">
+  <link rel="stylesheet" href="restaurantList.css" />
+  <link rel="stylesheet" href="menuList.css">
+  <link rel="stylesheet" href="order.css">
+  <link rel="stylesheet" href="notice.css">
+  <link rel="stylesheet" href="aproval.css">
+  <link rel="stylesheet" href="random_style.css">
+  <link rel="stylesheet" href="adminMember.css">
+  <link rel="stylesheet" href="adminRes.css">
+  <script src="https://kit.fontawesome.com/e1bd1cb2a5.js"></script>
+  <script src="/yeogiyo/js/jquery-3.6.0.js"></script>
+
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div class="header_container">
+        <div class="logo_container">
+          <h1>
+            <a href="/yeogiyo"> <img src="/yeogiyo/images/Home_button.png" alt="홈으로" width="150" height="50">
+            </a>
+          </h1>
+        </div>
+        <div class="nav_container" id="nav_menu">
+          <table id="admin">
+            <tr>
+              <td>관리자님, 반갑습니다</td>
+              <td><input type="button" value="회원관리" onclick="location.href='/yeogiyo/admin/memberManage';" /></td>
+            </tr>
+            <tr>
+              <td><input type="button" value="로그아웃" onclick="location.href='/yeogiyo/member/logout';" /></td>
+              <td><input type="button" value="가게관리" onclick="location.href='/yeogiyo/admin/resManage';" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </header>
+
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/memberManage.css" />
+<style>
+	div#search-container {margin:0 0 10px 0; padding:3px; background-color: rgba(250, 0, 80, 0.7);}
+	div#search-memberId {display: <%= type == null || "memberId".equals(type) ? "inline-block" : "none" %>;}
+	div#search-memberName{display:<%= "memberName".equals(type) ? "inline-block" : "none" %>;}
+	div#search-gender{display: <%= "gender".equals(type) ? "inline-block" : "none" %>;}
+</style>
+<section id="memberManage-container">
+	<h2>회원관리</h2>
+	   <div id="search-container">
+        회원조회 : 
+        <select id="searchType">
+            <option value="memberId" <%= "memberId".equals(type) ? "selected" : "" %>>아이디</option>		
+            <option value="memberName" <%= "memberName".equals(type) ? "selected" : "" %>>회원명</option>
+            <option value="gender" <%= "gender".equals(type) ? "selected" : "" %>>성별</option>
+        </select>
+        <div id="search-memberId" class="search-type">
+            <form action="<%=request.getContextPath()%>/admin/memberFinder">
+                <input type="hidden" name="searchType" value="memberId"/>
+                <input type="text" name="searchKeyword"  size="25" value="<%= "memberId".equals(type) ? kw : "" %>" placeholder="검색할 아이디를 입력하세요."/>
+                <button type="submit">검색</button>			
+            </form>	
+        </div>
+        <div id="search-memberName" class="search-type">
+            <form action="<%=request.getContextPath()%>/admin/memberFinder">
+                <input type="hidden" name="searchType" value="memberName"/>
+                <input type="text" name="searchKeyword" size="25" value="<%= "memberName".equals(type) ? kw : "" %>" placeholder="검색할 이름을 입력하세요."/>
+                <button type="submit">검색</button>			
+            </form>	
+        </div>
+        <div id="search-gender" class="search-type">
+            <form action="<%=request.getContextPath()%>/admin/memberFinder">
+                <input type="hidden" name="searchType" value="gender"/>
+				<input type="radio" name="searchKeyword" value="M" > 남
+                <input type="radio" name="searchKeyword" value="F" > 여
+                <button type="submit">검색</button>
+            </form>
+        </div>
+    </div>
+
+<table id="tbl-memberList">
+		<thead>
+			<tr>
+				<th>아이디</th>
+				<th>이름</th>
+				<th>회원권한</th>
+				<th>생년월일</th>
+				<th>성별</th>
+				<th>주소</th>
+				<th>휴대폰번호</th>
+				<th>이메일</th>
+				<th>회원가입일</th>
+			</tr>
+		</thead>
+		<tbody>
+				<tr>
+					<td colspan="9" style="text-align:center;"> 조회된 회원이 없습니다. </td>
+				</tr>
+				<tr onmouseover="this.style.background='rgba(250, 0, 80, 0.2)'" onmouseout="this.style.background='white'">
+					<td><%= m.getMemberId() %></td>
+					<td><%= m.getMemberName() %></td>
+					<td style="text-align:center;"><%= m.getMemberRole().equals("U") ? "일반" : "관리자" %></td>
+					<td><%= m.getBirthday() != null ? m.getBirthday() : ""%></td>
+					<td><%= "M".equals(m.getGender()) ? "남" : "여" %></td>
+					<td><%= m.getAddress() != null ? m.getAddress() : "" %> <%= m.getAddressSub() != null ? m.getAddressSub() : "" %></td>
+					<td><%= m.getPhone() %></td>
+					<td><%= m.getEmail() != null ? m.getEmail() : "" %></td>
+					<td><%= m.getMemberEnroll() %></td>
+				</tr>
+		</tbody>
+	</table>
+	<div id="pageBar">
+	</div>
+</section>
+<form 
+	action="<%= request.getContextPath() %>/admin/memberUpdate"
+	name="memberUpdateFrm"
+	method="GET">
+	<input type="hidden" name="memberId" />
+</form>
+
+    <footer>
+      <div class="footer" ng-show="is_yogiyo &amp;&amp; !session_storage.oauth_next">
+        <div class="footer-menu">
+          <ul>
+            <li class="mb ng-hide" ng-show="is_mobile_device"><a ng-bind="check_login() ? '로그아웃' : '로그인'"
+                ng-click="login()" class="ng-binding">로그인</a></li>
+            <li class="mb cscenter ng-hide" ng-show="is_mobile_device"><a href="#/contact/">고객만족센터</a></li>
+            <li class="mb notice"><a href="#/notice/">공지사항</a></li>
+            <li class="sns-link"><a href="https://www.facebook.com/Yogiyokorea/" class="facebook"
+                target="_blank"><span></span>KH_정보교육원</a></li>
+          </ul>
+        </div>
+        <div class="service-info">
+          <div class="bpg">
+            <a href="#/trust/"><span class="img"></span><span class="text">여기요<br>안심센터
+              </span></a>
+          </div>
+          <div class="cleanreview">
+            <a href="#/cleanreview/"><span class="img"></span><span class="text">여기요 100%<br>클린리뷰
+              </span></a>
+          </div>
+          <div class="csc">
+            <em>고객만족센터</em> <strong>1588-응애응애</strong> <span>아마도 24시간,
+              연중유휴</span>
+          </div>
+        </div>
+        <div class="guide">
+          <p>
+            맛집이조는 그냥 SemiProject로 이 페이지를 만들었으며 재미로 봐주셨으면 좋겠습니다. <br> 고소나
+            신고를 할시 불안하니 피해주시면 감사하겠고 KH_정보교육원의 학생이시라면 이런거 하지않았으면 좋겠습니다. <br>
+            레이디 젠틀맨 어쩌구저쩌구 오케이 땡큐
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

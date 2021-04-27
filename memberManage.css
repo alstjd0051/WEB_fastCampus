@@ -1,0 +1,73 @@
+div#search-container {
+  margin: 20px 0px 0px 0px;
+  padding: 20px;
+  background-color: rgb(250 0 80);
+  color: beige;
+  font-size: 20px;
+}
+
+div#search-memberId {
+  display: inline-block;
+}
+
+div#search-memberName {
+  display: none;
+}
+
+div#search-gender {
+  display: none;
+}
+
+#memberManage-container {
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#tbl-memberList {
+  margin: 0%;
+  padding: 2%;
+}
+
+#searchType {
+  width: 20%;
+  height: 30px;
+}
+
+.management {
+  font-size: 35px;
+  margin: 17px;
+}
+
+.serchName {
+  height: 30px;
+}
+
+.serch-Click {
+  opacity: 0.6;
+  transition: 0.3s;
+  height: 30px;
+  width: 60px;
+}
+.serch-Click:hover {
+  opacity: 1;
+}
+
+.table_id {
+  border: 0px solid #bcbcbc;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+}
+.membership {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-color: rgba(250, 0, 80, 0.2);
+}
+.img_member {
+  margin: 20%;
+  width: 50px;
+  height: 50px;
+}
