@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    border:선-두께(border-width) 선-종류(border-style) 선-색상(border-color) 
+  -->
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <br><br><br><br><br>
+
+
+
+
+  <hr>
+  <a href="./index.html">메인으로</a>
+
+  
+  <style>
+    /* border-width = 요소 테두리 선의 */
+    /* 
+    border-style
+    none - 선없음
+    solid - 실선(일반선)
+    dashed - 파선
+    */
+    /* 
+    border- color : 요소 테두리선의 색상을 지정하는 단축 송성
+    black 검정색(기본)
+    색상 선의색상
+    transparent 투명
+    */
+    .container .item {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+
+}
+.container .item:first-child{
+  border: 4px dashed red;
+}
+  </style>
+</body>
+</html>
