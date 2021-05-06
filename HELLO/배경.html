@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div></div>
+  <div id="naver"></div>
   <h2>background-color : 요소의 배경 색상</h2>
   <li>transparent = 투명함</li>
   <li>색상 = 지정 가능한 색상</li>
@@ -24,17 +24,41 @@
   <li>repeat-y : 이미지를 수직 반복</li>
   <li>no - repeat : 반복없음</li>
 
-  <h2>background-repeat</h2>
+  <h2>background-repeat : 요소의 배경 이미지를 반복</h2>
   <li>repeat : 이미지를 수직, 수평 반복</li>
   <li>repeat-x : 이미지를 수평 반복</li>
   <li>repeat-y : 이미지를 수직 반복</li>
   <li>no-repeat : 반복 없음</li>
-  
+  <hr>
+  <div id="google1"></div>
+  <h2>background-position : 요소의 배경 이미지 위치</h2>
+  <li>0% 0% 0% : 0% ~ 100% 사이의값</li>
+  <li>방향 : bottom, left, right, center 방향</li>
+  <li>단위 : px, em, rem 등 단위로 지정</li>
+
+  <hr>
+  <div id="google2"></div>
+  <h2>background-size : 요소의 배경 이미지 크기</h2>
+  <li>auto : 이미지의 실제 크기</li>
+  <li>단위 : px, em, rem 등 단위로지정</li>
+  <li>cover : 비율을 유지, 요소의 더 넓은 너비에 맞춤</li>
+  <li>contain : 비율을 유지 요소의 더 짧은 너비에 맞춤</li>
+
+  <hr>
+  <div id="git"></div>
+  <h2>background-attachment : 요소의 배경 이미지 스크롤 특성</h2>
+  <li>scroll : 이미지가 요소를 따라서 같이 스크롤</li>
+  <li>fixed : 이미지가 뷰포트에 고정, 스크롤 X</li>
+  <li>local : 요소 내 스크롤 시 이미지가 같이 스크롤 (솔직히 잘안씀)</li>
   <br>
+
   <hr>
   <a href="index.html">이전으로</a>
   <style>
-    div {
+    body {
+      3000px;
+    }
+    #naver {
       width: 222px;
       height: 52px;
       background-color: skyblue;
@@ -44,6 +68,37 @@
       background-repeat: no-repeat;
       background-position: 0 -158px;
       vertical-align: top;
+    }
+
+    #google1 {
+      width: 500px;
+      height: 500px;
+      background-color: skyblue;
+      background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d2abd662597191.5a9589b09ddf5.jpg");
+      -webkit-background-size: 433px 409px;
+      background-size: 425px 402px;
+      background-repeat: no-repeat;
+      background-position: center;
+      vertical-align: top;
+    }
+
+    #google2 {
+      width: 222px;
+      height: 222px;
+      background-color: saddlebrown;
+      background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d2abd662597191.5a9589b09ddf5.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #git {
+      /* width: 200px; */
+      height: 200px;
+      background-color: orange;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbYowTA1Jrk5C7lpRh4ORVOMFRwpCKL8M_K2jqdD4_5OKT2cgAK8OpcKNd6RmQ0XAsJ9I&usqp=CAU);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: scroll;
     }
   </style>
 </body>
