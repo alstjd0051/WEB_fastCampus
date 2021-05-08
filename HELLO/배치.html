@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+</head>
+<body>
+  <h1>배치</h1>
+  <hr>
+  <br><br><br>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h2>position : 요소의 위치 지정 기준<br>(position과 같이 사용하는 CSS 속성들!, 모두 음수를 사용 가능)<br>[top,bottom, left, right, z-index]</h2>
+  <li>static : 기준없음</li>
+  <li>relative : 요소 자신을 기준</li>
+  <li>absolute : 위치 상 부모 요소를 기준 (위치 상 부모 요소를 꼭 확인)</li>
+  <li>fixed : 뷰포트(브라우저)를 기준</li>
+  <li>sticky 스크롤 영역 기준(배치와 거리가 멀다)</li>
+  <hr>
+
+
+  <h3>top, bottom,left, right</h3>
+  <li>auto : 브라우저가 계산</li>
+  <li>단위 : px, em, rem등 단위로 지정</li>
+<br><br><br><br><br><br>
+<a href="index.html">이전으로</a>
+
+
+
+
+  <style>
+    .container {
+      width: 300px;
+      background-color: royalblue;
+    }
+    .container .item {
+      border: 4px dashed red;
+      background-color: pink;
+    }
+    .container .item:nth-child(1) {
+      width: 100px;
+      height: 100px;
+    }
+    .container .item:nth-child(2){ 
+      width: 140px;
+      height: 70px;
+      position: relative;
+      top: 30px;
+      left: 105px;
+    }
+    .container .item:nth-child(3){ 
+      width: 70px;
+      height: 120px;
+    }
+  </style>
+</body>
+</html>

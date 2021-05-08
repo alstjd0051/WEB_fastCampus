@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="substance">
+    <h1>
+      요소쌓임 순서(Stack order)
+    </h1>
+    <p id="wonder">어떤 요소가 사용자와 더 가깝게 있는지(위에 쌓이는지) 결정</p>
+    <li>요소에 position 속성의 값이 잇는경우 위에 쌓임.(기본값 static 제외)</li>
+    <li>1번 조건이 같은 경우, z-index 속성의 숫자 값이 높을 수록 위에 쌓임.</li>
+    <li>1번과 2번 조건까지 같은 경우, HTML의 다음 구조일 수록 위에 쌓임.</li>
+  </div>
+
+  <br><br>
+  <hr>
+  <div class="conainer1">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <br><br><br><br><br>
+  <a href="index.html">이전으로</a>
+  <style>
+    body {
+      height: 3000px;
+    }
+
+    .wrap {
+      width: 400px;
+      height: 300px;
+      background-color: skyblue;
+      position: relative;
+    }
+
+    .container {
+      width: 300px;
+      background-color: royalblue;
+      position: relative;
+    }
+
+    .container .item {
+      border: 4px dashed red;
+      background-color: pink;
+    }
+
+    .container .item:nth-child(1) {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container .item:nth-child(2) {
+      width: 140px;
+      height: 70px;
+      position: fixed;
+      bottom: 30px;
+      /*밑에서 30px*/
+      right: 60px;
+      /*오른쪽에서 60px*/
+    }
+
+    .container .item:nth-child(3) {
+      width: 70px;
+      height: 120px;
+    }
+
+    .substance {
+      text-align: center;
+    }
+
+    .substance>li {
+      list-style-type: decimal;
+    }
+
+    #wonder {
+      text-decoration: underline;
+    }
+
+    .conainer1 {
+      width: 300px;
+      background-color: rosybrown;
+      position: relative;
+    }
+    .conainer1 .item {
+      width: 100px;
+      height: 100px;
+      border: 4px dashed red;
+      background-color: bisque;
+    }
+    .conainer1 .item:nth-child(1){
+      position: relative;
+      z-index: 1;
+    }
+    .conainer1 .item:nth-child(2){
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+    .conainer1 .item:nth-child(3){
+      position: fixed;
+      z-index: 1;
+    }
+  </style>
+</body>
+
+</html>

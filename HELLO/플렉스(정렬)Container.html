@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Container1</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <br><br><br>
+  <hr>
+  <div class="content">
+    <h1>display</h1>
+    <p>Flex Container의 화면 <span class="span1">출력(보여짐) 특성</span></p>
+    <li>flew : 블록 요소와 같이 Flex Container 정의</li>
+    <li>inline-flex : 인라인 요소와 같이 Flex Container 정의</li>
+  </div>
+  <br>
+  <hr>
+  <div class="content">
+    <h1>flex-direction</h1>
+    <li>row : 행 축(좌=>우)</li>
+    <li>row-reverse : 행 축 (우 => 좌)</li>
+    <li>column : 열 축(위 => 아래)</li>
+    <li>column-reverse : 열 축 (아래=>위)</li>
+  </div>
+
+
+
+
+
+
+
+  <style>
+    .container {
+      background-color: royalblue;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-evenly;
+    }
+
+
+
+    .container .item {
+      width: 100px;
+      height: 100px;
+      border: 3px dashed red;
+      background-color: orange;
+    }
+
+    .content {
+      text-align: center;
+      list-style-type: decimal;
+    }
+
+    .span1 {
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 17px;
+    }
+  </style>
+</body>
+
+</html>
