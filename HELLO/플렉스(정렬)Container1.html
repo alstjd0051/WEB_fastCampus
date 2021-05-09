@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+</head>
+
+<body>
+  <h1>1.flex-wrap</h1>
+  <h3>Flex Items 묶음(줄바꿈) 여부</h3>
+  <div class="content">
+    <li>nowrap : 묶음(줄바꿈) 없음(기본값)</li>
+    <li>wrap : 여러 줄로 묶음</li>
+    <li>wrap-reverse : wrap의 반대 방향으로 묶음 </li>
+  </div>
+  <br><br><br>
+
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+  <br><br><br>
+  <h1>justify-content</h1>
+  <h3><span class="line">주 축</span> 의 정렬 방법</h3>
+  <div class="content">
+    <li>flex-start : flex Items를 시작점으로 정렬</li>
+    <li>flex-end : Flex Items를 끝점으로 정렬</li>
+    <li>center : Flex Items를 가운데 정렬</li>
+    <li>space-between : 각 Flex Item 사이를 균등하게 정렬</li>
+    <li>space-around : 각 Flex Item의 외부 여백을 균등하게 정렬</li>
+  </div>
+  <br><br><br>
+  <div class="container1">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+  <br><br><br>
+
+  <h1>align-content</h1>
+  <h3><span class="line">교차 축</span>의 <span class="line">여러 줄</span> 정렬 방법</h3>
+  <div class="content">
+    <li>stretch : Flex Items를 시작점으로 정렬</li>
+    <li>flex-start : Flex Items를 시작점으로 정렬</li>
+    <li>flex-end : Flex Items를 끝점으로 정렬</li>
+    <li>center Flex Items를 가운데 정렬</li>
+    <li>space-between 각 Flex Item 사이를 균등하게 정렬</li>
+    <li>space-around : 각 Flex Item의 외부 여백을 균등하게 정렬</li>
+  </div>
+  
+
+
+  <style>
+    body {
+      text-align: center;
+      list-style-type: decimal;
+    }
+
+
+    .container {
+      width: 250px;
+      height: 200px;
+      background-color: royalblue;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .container .item {
+      width: 100px;
+      height: 100px;
+      border: 3px dashed red;
+      background-color: orange;
+    }
+
+    .content {
+      text-align: center;
+      list-style-type: decimal;
+    }
+
+    .line {
+      text-decoration: underline;
+    }
+    .container1 {
+      background-color: royalblue;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .container1 .item {
+      width: 100px;
+      height: 100px;
+      border: 3px dashed red;
+      background-color: orange;
+    }
+  </style>
+</body>
+
+</html>
