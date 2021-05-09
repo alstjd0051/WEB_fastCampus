@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex_item</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <hr>
+  <br><br><br>
+  <h1>order</h1>
+  <h3>Flex Item의 순서</h3>
+  <div>
+    <li>0(기본값) : 순서없음</li>
+    <li>숫자 : 숫자가 작을수록 먼저</li>
+  </div>
+
+  <div class="order">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+  </div>
+  <br>
+  <hr>
+  <br><br><br><br>
+  <h1>flex-grow</h1>
+  <h3>flex Item의 <span class="line">증가</span> 너비 비율</h3>
+  <div>
+    <li>0(기본값) : 증가 비율 없음</li>
+    <li>숫자 : 증가 비율</li>
+  </div>
+
+
+  <div class="flex_grow">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <br>
+  <hr>
+  <br><br><br>
+
+  <h1>flex-shrink</h1>
+  <h3>Flex Item의 <span class="line">감소</span>너비 비율</h3>
+  <li>1(기본값) : flex Container 너비에 따라 감소 비율 적용</li>
+  <li>숫자 : 감소 비율</li>
+
+  <div class="felx_shrink">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <br>
+  <hr>
+  <br><br><br>
+
+
+  <h1>flex-basis</h1>
+  <h3>Flex Item의 공간 배분 전 <span class="line">기본</span> 너비</h3>
+  <li>auto(기본값) : 요소의 Content 너비</li>
+  <li>단위 : px,em,rem 등 단위로 지정</li>
+
+  <div class="flex_basis">
+    <div class="item">Good</div>
+    <div class="item">A</div>
+    <div class="item">Hello world</div>
+  </div>
+
+  <style>
+    body {
+      list-style-type: decimal;
+    }
+
+    .line {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 500px;
+      height: 300px;
+      background-color: royalblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container .item {
+      width: 100px;
+      height: 100px;
+      border: 3px dashed red;
+      background-color: orange;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .container .item:nth-child(3) {
+      flex-grow: 2;
+    }
+
+    .order {
+      width: 500px;
+      height: 300px;
+      background-color: royalblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .order .item {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border: 1px dashed blue;
+      color: white;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .order .item:nth-child(3) {
+      order: -1;
+    }
+
+    .order .item:nth-child(4) {
+      order: 2;
+    }
+
+    .order .item:nth-child(2) {
+      order: 17;
+    }
+    .flex_grow {
+      width: 500px;
+      height: 200px;
+      background-color: royalblue;
+      display: flex;
+    }
+
+    .flex_grow .item {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border: 1px dashed blue;
+      color: white;
+      font-size: 15px;
+      text-align: center;
+    }
+    .flex_grow .item:nth-child(1) {
+      flex-grow: 0;
+    }
+    .flex_grow .item:nth-child(2) {
+      flex-grow: 2;
+    }
+    .flex_grow .item:nth-child(3) {
+      flex-grow: 1;
+    }
+
+
+    .felx_shrink {
+      width: 200px;
+      height: 200px;
+      background-color: royalblue;
+      display: flex;
+    }
+
+    .felx_shrink .item {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border: 1px dashed blue;
+      color: white;
+      font-size: 15px;
+      text-align: center;
+      flex-shrink: 0;
+      font-weight: bold;
+    }
+
+    .flex_basis {
+      width: 500px;
+      height: 200px;
+      background-color: royalblue;
+      display: flex;
+    }
+
+    .flex_basis .item {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border: 1px dashed blue;
+      color: white;
+      font-size: 15px;
+      text-align: center;
+      flex-grow: 1;
+      flex-basis: auto;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    
+    .flex_basis .item:nth-child(1){
+      flex-grow: 1;
+      flex-basis: 100px;
+    }
+    .flex_basis .item:nth-child(2){
+      flex-grow: 1;
+      flex-basis: 100px;
+    }
+    .flex_basis .item:nth-child(3){
+      flex-grow: 2;
+      flex-basis: 100px;
+    }
+
+  </style>
+</body>
+
+</html>
