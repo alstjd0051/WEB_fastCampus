@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition</title>
+</head>
+
+<body>
+  <div></div>
+
+  <h1>transition</h1>
+  <h2> : 속성명 <span class="point">지속시간</span> 타이밍함수 대기시간;</h2>
+  <h3>요소의 <span class="line">전환(시작과 끝)</span> 효과를 지정하는 <span class="line">단축 속성</span></h3>
+<br>
+
+  <ul>
+    <h2>1.transition-property</h2>
+    <h3>전환 효과를 사용할 <span class="line">속성 이름</span>을 지정</h3>
+    <li>all(기본값) : 모든 속성에 적용</li>
+    <li>속성이름 : 전환 효과를 사용할 속성 이름 명시</li>
+  </ul>
+<br>
+  <ul>
+    <h2>2.transition-duration</h2>
+    <h3>전환 효과의 <span class="line">지속시간</span>을 지정</h3>
+    <li>0s(기본값) : 전환 효과 없음</li>
+    <li>시간 : 지속시간(s)을 지정</li>
+  </ul>
+  <br>
+  <ul>
+    <h2>3.transition-timing-function</h2>
+    <h3>전환 효광 <sapn class="line">타이밍(easing) 함수</sapn>를 지정</h3>
+    <li>ease (기본값) : 느리게 - 빠르게 - 느리게</li>
+    <li>linear : 일정하게</li>
+    <li>ease-in : 느리게 - 빠르게</li>
+    <li>ease-out : 빠르게 - 느리게</li>
+    <li>ease-in-out : 느리게 - 빠르게 - 느리게</li>
+    <li>cubic-bezier(n,n,n,n) : 자신만의 값을 정의(0~1)</li>
+    <li>steps(n) : n번 분할된 애니메이션</li>
+  </ul>
+
+  <br>
+  <ul>
+    <h2>4.transition-delay</h2>
+    <h3>전환 효과가 몇 초 뒤에 시작할지 <span class="line">대기시간</span>을 지정</h3>
+    <li>0s(기본값) : 대기시간 없음</li>
+    <li>시간 : 대기시간(s)을 지정</li>
+  </ul>
+
+
+  <ul>
+    <h3>transition관련 url</h3>
+    <li><a href="https://easings.net/ko">easing function</a></li>
+    <li><a href="https://greensock.com/docs/v2/Easing">tweenmax easing</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function">easing function mdn</a></li>
+  </ul>
+
+
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      transition:
+        1s .5s,
+        background-color 2s;
+    }
+
+    div:hover {
+      width: 300px;
+      background-color: royalblue;
+    }
+
+    div:active {
+      width: 100px;
+      background-color: skyblue
+    }
+
+    .line {
+      text-decoration: underline;
+    }
+
+    .point {
+      color: #de4948;
+    }
+
+    ul {
+      list-style-type: decimal;
+    }
+  </style>
+</body>
+
+</html>
