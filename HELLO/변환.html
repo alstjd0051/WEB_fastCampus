@@ -1,35 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>transform</title>
 </head>
+
 <body>
   <div class="container">
     <div class="item">AB</div>
   </div>
+  <br><br><br>
+  <p>deg 단위는 Degree 단어의 약어</p>
+  <br>
+  <p>요소의 <span class="line">변환 효과</span></p>
+  <li> transform : 변환함수1변환함수2변환함수3...;</li>
+  <li>transform : 원근법 이동 크기 회전 기울임;</li>
+  <br>
+  <h2>2D 변환 함수</h2>
+  <div>
+    <h3>px</h3>
+    <li>translate(x,y) 이동(x축,y축)</li>
+    <li>transalateX(x) 이동 (x축)</li>
+    <li>translateY(y) 이동(y축)</li>
+  </div>
+  <div>
+    <h3>없음(배수)</h3>
+    <li>scale(x,y) 크기 (x축,y축)</li>
+    <li>scaleX(x) 크기(x축)</li>
+    <li>scaleY(y) 크기(y축)</li>
+  </div>
+  <div>
+    <h3>deg</h3>
+    <li>rotate(degree) 회전(각도)</li>
+    <li>skew(x,y) 기울임(x축,y축)</li>
+    <li>skewX(x) 기울임(x축)</li>
+    <li>skewX(y) 기울임(y축)</li>
+  </div>
+  <br>
+  <li>matrix(n,n,n,n,n,n) 2차원 변환 효과</li>
 
-
-
-
+  <h2>3D 변환 함수</h2>
+  <div>
+    <h3>px</h3>
+    <li>translateZ(z) 이동(z축)</li>
+    <li>translate3d(x,y,z) 이동(x,y,z축)</li>
+    <li>scaleZ(z) 크기(z축)</li>
+    <li>scale(x,y,z) 크기(x,y,z축)</li>
+    <li>perspective(n) 원근법(거리)</li>
+  </div>
+  <div>
+    <h3>deg</h3>
+    <li>rotateX(x) 회전(x축)</li>
+    <li>rotateY(y) 회전(y축)</li>
+    <li>rotateZ(z) 회전(z축)</li>
+  </div>
+  <br>
+  <li>rotate3d(x,y,z,a) 회전 (x,y,z축, 각도)</li>
 
   <style>
     body {
       padding: 100px;
     }
+
+    .line {
+      text-decoration: underline;
+    }
+
     .container {
       width: 100px;
       height: 100px;
       background-color: royalblue;
     }
+
     .container .item {
       width: 100px;
       height: 100px;
       background-color: orange;
-      transform: rotate(45deg);
+      transform: rotate(45deg) scale(1.3);
     }
   </style>
 </body>
+
 </html>
