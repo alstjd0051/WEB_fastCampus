@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+</head>
+
+<body>
+  <h2>함수</h2>
+  <div>
+    <h3>특정 동작(기능)을 수행하는 일부 코드의 집합(부분)</h3>
+    <ul>
+      <li>function</li>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+  <script>
+    // 함수 선언
+    // function helloFunc() {
+    // 실행코드
+    //   console.log(1234);
+    // }
+
+    // helloFunc();
+
+    // function returnFunc() {
+    //   return 123;
+    // }
+    // let a = returnFunc();
+
+    // console.log(a);
+
+    // 함수 선언!
+    function sum(a, b) { // a와 b는 매개변수(Parameters)
+      return a + b;
+    }
+    // 재사용!
+    let a = sum(1, 2); //1과 2는 인수(Arguments)
+    let b = sum(7, 12);
+    let c = sum(2, 4);
+
+    console.log(a, b, c);
+
+    // 가명(이름이 있는) 함수
+    // 함수 선언
+    function hello() {
+      console.log('Hello');
+    }
+    // 익명(이름이 없는)함수
+    // 함수 표현! (호이스팅 Hoisting)
+    let world = function () {
+      console.log('World~')
+      
+    }
+    // 함수호출!
+    hello();
+    world();
+
+
+
+
+    // 객체 데이터
+    const miiin_ssoeng = {
+      name: 'minseong',
+      age : 26,
+      // 메소드(Method)
+      getName: function () {
+        return this.name;
+      }
+    };
+
+    const hisName = miiin_ssoeng.getName(); 
+    console.log(hisName); //minseong
+    // 또는
+    console.log(miiin_ssoeng.getName()); //minseong
+  </script>
+</body>
+
+</html>
