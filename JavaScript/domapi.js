@@ -32,3 +32,15 @@ console.log(isContains); //false
 boxEK.addEventListener('click',function() {
   console.log("뻥이야");
 });
+
+
+boxEl.addEventListener('click', function () {
+  console.log('Click~!');
+  boxEl.classList.add('active');
+  console.log(boxEl.classList.contains('active')
+  );
+  boxEl.classList.remove('active');
+  console.log(
+    boxEl.classList.contains('active')
+  );
+});
