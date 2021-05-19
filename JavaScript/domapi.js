@@ -28,3 +28,7 @@ console.log(isContains); //true
 boxEK.classList.remove('active');
 isContains = boxEK.classList.contains('active');
 console.log(isContains); //false
+
+boxEK.addEventListener('click',function() {
+  console.log("뻥이야");
+});
