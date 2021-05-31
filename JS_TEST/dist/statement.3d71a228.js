@@ -137,29 +137,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // console.log(abc())
 // const a = random()
-var ulEl = document.querySelector('ul'); // console.log(ulEl)
+// const ulEl = document.querySelector('ul')
+// console.log(ulEl)
 
 /*
 for statement
 for(시작조건; 종료조건; 변화조건) {}
 */
-
-var _loop = function _loop(i) {
-  var li = document.createElement('li');
-  li.textContent = "list-".concat(i + 1);
-
-  if ((i + 1) % 2 === 0) {
-    li.addEventListener('click', function () {
-      console.log(li.textContent);
-    });
-  }
-
-  ulEl.appendChild(li);
-};
-
-for (var i = 0; i < 10; i += 1) {
-  _loop(i);
-} // // switch statement
+// for (let i = 0; i < 10; i += 1) {
+//   const li = document.createElement('li')
+//   li.textContent = `list-${i + 1}`
+//   if ((i + 1) % 2 === 0) {
+//     li.addEventListener('click', function () {
+//       console.log(li.textContent)
+//     })
+//   }
+//   ulEl.appendChild(li)
+// }
+// // switch statement
 // switch (a) {
 //   case 0:
 //     console.log('a is 0')
@@ -181,6 +176,27 @@ for (var i = 0; i < 10; i += 1) {
 // } else {
 //   console.log('rest...')
 // }
+// 함수 복습
+function sum(x, y) {
+  // console.log(x + y)
+  return x + y;
+} // const a = sum(1, 3)
+// const b = sum(4, 12)
+// console.log(a)
+// console.log(sum(1, 3))
+// console.log(b)
+// console.log(sum(4, 12))
+// console.log(a + b)
+
+
+sum(1, 3);
+
+function zem(x, y) {
+  console.log(arguments);
+  return arguments[0] + arguments[1];
+}
+
+console.log(zem(7, 3));
 },{"./getRandom":"getRandom.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -209,7 +225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12594" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10644" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
