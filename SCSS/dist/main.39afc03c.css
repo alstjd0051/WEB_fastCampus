@@ -1,5 +1,11 @@
-.container h1 {
-  color: royalblue;
+.container ul {
+  font-size: 40px;
+}
+.container ul li .name {
+  color: skyblue;
+}
+.container ul li .age {
+  color: blue;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

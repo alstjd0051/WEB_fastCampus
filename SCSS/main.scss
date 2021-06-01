@@ -1,6 +1,17 @@
-$color : royalblue;
+// 중첩 with SassMeister
 .container {
-  h1 {
-    color: $color;
+  ul {
+    font-size: 40px;
+
+    li {
+
+      .name {
+        color: skyblue;
+      }
+
+      .age {
+        color: blue;
+      }
+    }
   }
 }
