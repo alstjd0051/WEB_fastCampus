@@ -1,16 +1,12 @@
-// 중첩 with SassMeister
 .container {
   ul {
-    font-size: 40px;
-
     li {
-
-      .name {
-        color: skyblue;
+      font-size: 40px;
+      .name{
+        color: royalblue;
       }
-
-      .age {
-        color: blue;
+      .age{
+        color: orange;
       }
     }
   }

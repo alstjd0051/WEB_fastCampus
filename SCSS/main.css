@@ -1,0 +1,12 @@
+.container ul li {
+  font-size: 40px;
+}
+
+.container ul li .name {
+  color: royalblue;
+}
+
+.container ul li .age {
+  color: orange;
+}
+/*# sourceMappingURL=main.css.map */
