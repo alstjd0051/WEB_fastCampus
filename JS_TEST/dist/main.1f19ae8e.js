@@ -118,18 +118,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-// 산술연산자(arithmetic operator)
-
-/**
- console.log(1+2)
- console.log(5-7)
- console.log(3 * 4)
- console.log(10/2)
- console.log(7 % 5)
- */
-//할당 연산자(assignment operator)
-//  const a = 2
-
 /*
 const minseong = {
   firstName: 'miiin_sseong',
@@ -153,23 +141,47 @@ console.log(actor.getfullName())
 
 /*
 클래스
- */
 function user(first, last) {
-  this.firstName = first;
-  this.lastName = last;
+  this.firstName = first
+  this.lastName = last
+}
+user.prototype.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`
+}
+const minseong = new user('minseong', 'song')
+const amy = new user('Amy', 'Clarke')
+const neo = new user('Neo', 'Smith')
+
+console.log(minseong.getFullName())
+console.log(minseong.getFullName())
+console.log(amy.getFullName())
+console.log(neo)
+ */
+//화살표 함수
+// () => {} vs function () {}
+
+/* const double = function (x, y) {
+  return x * 2
+}
+console.log('double: ', double(7))
+
+const doubleArrow = (x) => ({
+  name : 'Miiin_sseong'
+})
+console.log('doubleArrow', doubleArrow(7)) */
+// 즉시실행함수
+// IIFE, Immediately-Invoked Function Expression
+var a = 7;
+
+function double() {
+  console.log(a * 2);
 }
 
-user.prototype.getFullName = function () {
-  return "".concat(this.firstName, " ").concat(this.lastName);
-};
+double();
 
-var minseong = new user('minseong', 'song');
-var amy = new user('Amy', 'Clarke');
-var neo = new user('Neo', 'Smith');
-console.log(minseong.getFullName());
-console.log(minseong.getFullName());
-console.log(amy.getFullName());
-console.log(neo);
+(function () {
+  console.log(a * 2);
+})();
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -198,7 +210,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12368" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "13398" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

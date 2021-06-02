@@ -1,4 +1,3 @@
-
 /*
 const minseong = {
   firstName: 'miiin_sseong',
@@ -38,3 +37,29 @@ console.log(minseong.getFullName())
 console.log(amy.getFullName())
 console.log(neo)
  */
+
+//화살표 함수
+// () => {} vs function () {}
+
+/* const double = function (x, y) {
+  return x * 2
+}
+console.log('double: ', double(7))
+
+const doubleArrow = (x) => ({
+  name : 'Miiin_sseong'
+})
+console.log('doubleArrow', doubleArrow(7)) */
+
+// 즉시실행함수
+// IIFE, Immediately-Invoked Function Expression
+const a = 7
+
+function double() {
+  console.log(a * 2)
+}
+double();
+
+(function () {
+  console.log(a * 2)
+})()
