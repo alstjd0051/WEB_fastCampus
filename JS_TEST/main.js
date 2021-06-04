@@ -88,23 +88,48 @@ double() */
 //  clearTimeOut() : 설정된 Timeout 함수를 종료
 //  clearInterval() : 설정된 Interval 함수를 종료
 
+/* const timer = setTimeout(function () {
+  console.log('A-yo')
+}, 2000)
+
+const h1El = document.querySelector('h1')
+h1El.addEventListener('click', function() {
+  clearTimeout(timer)
+}); */
+
+
 /* setTimeout( () => {
   console.log('miiin_sseong')
-}, 3000) */
+}, 1000) */
 
 /* const timer = setTimeout(() => {
   console.log('miiin_sseong')
 }, 3000) */
 
-const timer = setInterval(() => {
+/* const timer = setInterval(() => {
   console.log('miiin_sseong')
-}, 3000)
+}, 3000) */
 
 /* const h1El = document.querySelector('h1')
 h1El.addEventListener('click', () => {
   clearTimeout(timer)
 }) */
-const h1El = document.querySelector('h1')
+/* const h1El = document.querySelector('h1')
 h1El.addEventListener('click', () => {
   clearInterval(timer)
+}) */
+
+
+// 콜백(Callback)
+// 함수의 인수로 사용되는 함수
+
+// setTimeout(함수, 시간)
+function timeout(Callback) {
+  setTimeout(() =>{
+    console.log('miiin_sseong')
+    Callback()
+  },3000)
+}
+timeout(() => {
+  console.log('Done')
 })
