@@ -124,7 +124,7 @@ h1El.addEventListener('click', () => {
 // 함수의 인수로 사용되는 함수
 
 // setTimeout(함수, 시간)
-function timeout(Callback) {
+/* function timeout(Callback) {
   setTimeout(() =>{
     console.log('miiin_sseong')
     Callback()
@@ -132,4 +132,6 @@ function timeout(Callback) {
 }
 timeout(() => {
   console.log('Done')
-})
+}) */
+
+// 생성자 함수(prototype)
