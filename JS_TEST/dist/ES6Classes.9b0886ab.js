@@ -118,20 +118,46 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"ES6Classes.js":[function(require,module,exports) {
-var _this = this;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 //ES6 Classes
-var user = {
-  name: 'minseong',
-  normal: function normal() {
-    console.log(this.name);
-  },
-  arrow: function arrow() {
-    console.log(_this.name);
+
+/* function User(first, last) {
+  this.firstName = first
+  this.lastName = last
+}
+User.prototype.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`
+} */
+//class문법
+var User = /*#__PURE__*/function () {
+  function User(first, last) {
+    _classCallCheck(this, User);
+
+    this.firstName = first;
+    this.lastName = last;
   }
-};
-user.normal();
-user.arrow();
+
+  _createClass(User, [{
+    key: "getFullName",
+    value: function getFullName() {
+      return "".concat(this.firstName, " ").concat(this.lastName);
+    }
+  }]);
+
+  return User;
+}();
+
+var miiinsseong = new User('miiiinseong', 'song');
+var amy = new User('Amy', 'Clarke');
+var neo = new User('Neo', 'Smith');
+console.log(miiinsseong);
+console.log(amy.getFullName());
+console.log(neo.getFullName());
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -160,7 +186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "3847" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "11322" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
