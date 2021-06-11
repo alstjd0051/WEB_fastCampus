@@ -1,9 +1,3 @@
-// JS 데이터
-
-// String: "", '', ``
-// Number
-// Boolean: truen, false
-// indefinded
-// null
-// Array: []
-// Obj ect: {}
+const result = 'Hello world!'.indexOf('world')
+console.log(result)
+// String.prototype indexOf()
