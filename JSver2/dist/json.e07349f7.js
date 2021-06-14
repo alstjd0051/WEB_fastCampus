@@ -117,9 +117,34 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"json.js":[function(require,module,exports) {
+})({"myData.json":[function(require,module,exports) {
+module.exports = {
+  "name": "miiin_sseong",
+  "age": 26,
+  "emails": ["wsc03002@naver.com", "https://github.com/alstjd0051"]
+};
+},{}],"json.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _myData = _interopRequireDefault(require("./myData.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+console.log(_myData.default);
+var user = {
+  'name': 'miiin_sseong',
+  age: 26,
+  emails: ['wsc03002@naver.com', 'https://github.com/alstjd0051']
+};
+console.log('user', user);
+var str = JSON.stringify(user);
+console.log('str', str);
+console.log(_typeof(str));
+var obj = JSON.parse(str);
+console.log('obj', obj);
+},{"./myData.json":"myData.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
