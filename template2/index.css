@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Fraunces:ital,wght@0,500;0,600;0,700;1,600&display=swap");
+
 *,
 *:after,
 *:before {
@@ -45,6 +46,7 @@ img {
 .header-middle {
   display: none;
 }
+
 @media (min-width: 1200px) {
   .header-middle {
     display: block;
@@ -59,6 +61,7 @@ img {
 .header-nav {
   display: none;
 }
+
 @media (min-width: 1200px) {
   .header-nav {
     display: block;
@@ -74,11 +77,13 @@ img {
   font-weight: 500;
   display: inline-block;
 }
+
 .header-link--button {
   background-color: #000;
   color: #fff;
   padding: 0.5rem 1.25rem;
 }
+
 .header-menu-button {
   margin-left: 0.75rem;
   border: 0;
@@ -89,7 +94,9 @@ img {
   padding-right: 30px;
   font-weight: 500;
 }
-.header-menu-button:after, .header-menu-button:before {
+
+.header-menu-button:after,
+.header-menu-button:before {
   content: "";
   display: block;
   position: absolute;
@@ -99,6 +106,7 @@ img {
   right: 0;
   top: 8px;
 }
+
 .header-menu-button:after {
   top: 16px;
   width: 12px;
@@ -111,6 +119,7 @@ img {
   display: flex;
   justify-content: center;
 }
+
 .page-title h1 {
   font-size: 1.75rem;
   font-weight: 700;
@@ -118,6 +127,7 @@ img {
   text-align: center;
   position: relative;
 }
+
 .page-title h1:after {
   content: "";
   display: block;
@@ -139,28 +149,31 @@ img {
   padding: 0 1.5rem;
   grid-column: span 5;
 }
+
 @media (min-width: 1200px) {
   .magazine-column {
     grid-column: span 1;
     border-right: 1px solid #CCC;
   }
+
   .magazine-column:last-child {
     border-right: none;
   }
 }
+
 @media (min-width: 1200px) {
   .magazine-column:nth-child(2) {
     grid-column: span 2;
   }
 }
 
-.article + .article {
+.article+.article {
   padding-top: 2rem;
   margin-top: 2rem;
   border-top: 1px solid #ccc;
 }
 
-.article-img + * {
+.article-img+* {
   margin-top: 1rem;
 }
 
@@ -175,22 +188,28 @@ img {
   line-height: 1.25;
   color: #000;
 }
+
 .article-title--large {
   font-size: 2rem;
 }
-.article-title--large + * {
+
+.article-title--large+* {
   margin-top: 1.5rem;
 }
+
 .article-title--medium {
   font-size: 1.5rem;
 }
-.article-title--medium + * {
+
+.article-title--medium+* {
   margin-top: 0.75rem;
 }
+
 .article-title--small {
   font-size: 1.25rem;
 }
-.article-title--small + * {
+
+.article-title--small+* {
   margin-top: 0.75rem;
 }
 
@@ -201,9 +220,11 @@ img {
 .mark {
   background-color: #fabea1;
 }
+
 .mark--secondary {
   background-color: #c2dddf;
 }
+
 .mark--tertiary {
   background-color: #F8E177;
 }
@@ -213,8 +234,9 @@ img {
   font-size: 1.125rem;
   line-height: 1.4;
 }
-.article-excerpt p + p,
-.article-creditation p + p {
+
+.article-excerpt p+p,
+.article-creditation p+p {
   margin-top: 1.5rem;
 }
 
@@ -232,19 +254,23 @@ img {
   overflow: hidden;
   background-blend-mode: multiply;
 }
-.article-author-img + .article-author-info {
+
+.article-author-img+.article-author-info {
   margin-left: 0.5rem;
 }
 
 .article-author-info {
   line-height: 1.375;
 }
+
 .article-author-info dl {
   margin-top: 0.25em;
 }
+
 .article-author-info dt {
   font-weight: 600;
 }
+
 .article-author-info dd {
   font-size: 0.875em;
 }
@@ -254,6 +280,7 @@ img {
   margin-bottom: 1rem;
   display: block;
 }
+
 .article-category svg {
   max-width: 1.5rem;
   margin-right: 0.5rem;
@@ -275,6 +302,7 @@ img {
   background-color: #000;
   margin-right: 0.5rem;
 }
+
 .podcast-play-button svg {
   max-width: 1rem;
   max-height: 1rem;
@@ -297,4 +325,39 @@ img {
 
 :focus {
   outline: 0;
+}
+
+
+/* 메뉴바 */
+.gnb {
+  position: absolute;
+  -webkit-box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.gnb .gnb_inner .group_nav {
+  padding: 10px 20px 34px 20px;
+  margin: 0 auto;
+  font-size: 13px;
+}
+
+.gnb .group_nav {
+  overflow: hidden;
+  position: relative;
+  padding: 11px 270px 11px 0;
+}
+
+.gnb .gnb_inner .group_nav .list_nav .boardList,
+.gnb .gnb_inner .group_nav .list_nav .eList .eList_,
+.gnb .gnb_inner .group_nav .list_nav .eList  .eList__,
+.gnb .gnb_inner .group_nav .list_nav .docmain,
+.gnb .gnb_inner .group_nav .list_nav .chatroomlist,
+.gnb .gnb_inner .group_nav .list_nav .sendmaillist,
+.gnb .gnb_inner .group_nav .list_nav .receivemaillist,
+.gnb .gnb_inner .group_nav .list_nav .elistAdmin
+.gnb .gnb_inner .group_nav .list_nav .attendanceManage
+{
+  border-radius: 25px;
+  background-color: rgb(194, 133, 133);
+  margin: 0 15px 0 0;
 }

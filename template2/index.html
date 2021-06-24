@@ -12,8 +12,10 @@
 <body>
 </body>
 <header class="header responsive-wrapper">
-  <div style="background-image:url(//img.dafont.com/preview.php?text=UPMU&amp;ttf=gobold_blocky1&amp;ext=2&amp;size=50&amp;psize=m&amp;y=60)" class="header-left">UPMU</div>
-  
+  <div
+    style="background-image:url(//img.dafont.com/preview.php?text=UPMU&amp;ttf=gobold_blocky1&amp;ext=2&amp;size=50&amp;psize=m&amp;y=60)"
+    class="header-left">UPMU</div>
+
   <div class="header-middle">
     <a href="#" class="header-link">Call Us (348) 981 872</a>
     <span>/</span>
@@ -30,6 +32,29 @@
 
 
 <main class="responsive-wrapper">
+
+
+  <div class="main-menu">
+    <li class="gnb_inner">
+      <div class="item__name">
+        <a href="${pageContext.request.contextPath}/board/boardList.do" class="boardList">게시판</a>
+        <div class="eList">
+          <a href="${pageContext.request.contextPath}/employeeList/eList.do" class="eList_">조직도</a>
+          <input type="button" value="조직도팝업" class="eList__" onclick="eListPop();">
+        </div>
+        <a href="${pageContext.request.contextPath}/document/docMain" class="docMain">전자결재</a>
+        <a href="${pageContext.request.contextPath}/chat/chatRoomList.do" class="chatRoom">채팅</a>
+        <a href="${pageContext.request.contextPath}/mail/sendMailList.do" class="sendMailList">보낸 메일함(테스트용 사번 : 1)</a>
+        <a href="${pageContext.request.contextPath}/mail/receiveMailList.do" class="receiveMailList">받은 메일함(테스트용 사번 :
+          2)</a>
+        <a href="${pageContext.request.contextPath}/admin/eListAdmin.do" class="eListAdmin">관리페이지</a>
+        <a href="${pageContext.request.contextPath}/attendance/attendanceManage.do" class="attendanceManage">근태관리</a>
+      </div>
+    </li>
+  </div>
+
+
+
   <div class="page-title">
     <h1>메인페이지</h1>
   </div>
@@ -37,12 +62,13 @@
     <div class="magazine-column">
       <article class="article">
         <h2 class="article-title article-title--large">
-          <a href="https://www.naver.com" class="article-link">The First Signs of <mark class="mark mark--primary">Alcoholic Liver</mark>
+          <a href="https://www.naver.com" class="article-link">The First Signs of <mark
+              class="mark mark--primary">Alcoholic Liver</mark>
             Damage Are Not in the Liver</a>
         </h2>
         <div class="article-excerpt">
           <p>The combination of my father's death and my personal back ground lit a fire in me to know more</p>
-          <p>He was admitted to the hospital on June 24, 2016.
+          <p>He was admitted to the hospital on June 24, 2016.</p>
         </div>
         <div class="article-author">
           <div class="article-author-img">

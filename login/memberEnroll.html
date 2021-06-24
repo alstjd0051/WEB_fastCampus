@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll</title>
+  <link rel="stylesheet" href="./memberEnroll.css">
+</head>
+
+<body>
+  <div class="sign-wrap">
+    <div class="sign_up">Sign</div>
+    <div class="sign_up_">Up</div>
+    <div class="sign-in-html">
+      <div class="sign-form">
+        <div class="sign-up-htm">
+          <div class="emp_no">
+            <label for="user" class="emp_no_">사번</label>
+            <input id="emp_no_enroll" type="text" class="emp_no_input">
+          </div>
+          <div class="emp_pw">
+            <label for="pass" class="emp_pw_">사원비밀번호</label>
+            <input id="emp_pw" type="password" class="emp_pw_input" data-type="password">
+          </div>
+          <div class="emp_pw_re">
+            <label for="pass" class="emp_pw_re_">비밀번호 재입력</label>
+            <input id="re_emp_pw" type="password" class="emp_pw_re_input" data-type="password">
+          </div>
+          <div class="emp_name">
+            <label for="pass" class="emp_name_">사원이름</label>
+            <input id="emp_name" type="text" class="emp_name_input">
+          </div>
+          <div class="emp_addr">
+            <label for="pass" class="emp_addr_">주소</label>
+            <input id="emp_addr" type="text" class="emp_addr_input">
+          </div>
+          <div class="emp_email">
+            <label for="pass" class="emp_email_">이메일</label>
+            <input id="emp_email" type="text" class="emp_email_input">
+          </div>
+
+          <div class="emp_birth">
+            <h3 class="emp_birth_">
+              <label for="yy" class="emp_birth_input">생년월일</label>
+            </h3>
+            <input type="text" class="birth_yy" maxlength="4" placeholder="년(4자)">
+
+            <select name="birth_mm_" class=" birth_mm">
+              <option>월</option>
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <input type="text" class="birth_dd" maxlength="2" placeholder="일">
+            <span class="error_next_box"></span>
+
+          </div>
+
+          <div class="emp_hiredate">
+            <label for="pass" class="emp_hiredate_">입사일</label>
+            <input id="emp_hiredate" type="text" class="emp_hiredate_input">
+          </div>
+          <div class="Department">
+            <label for="pass" class="Department_">부서</label>
+            <input id="department" type="text" class="Department_input">
+          </div>
+          <div class="hr"></div>
+          <div class="sign_up_button">
+            <input type="submit" class="sign_up_button_" value="Sign Up">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

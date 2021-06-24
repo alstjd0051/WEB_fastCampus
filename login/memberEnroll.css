@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: #6a6f8c;
+    background: #d1dddb;
+    font: 600 16px/18px 'Open Sans', sans-serif;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+.sign-wrap {
+    width: 100%;
+    margin: auto;
+    max-width: 50%;
+    min-height: 975px;
+    position: relative;
+    box-shadow: 0 12px 15px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
+}
+
+.sign-in-html {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 20px 113px 45px 90px;
+    background-color: #85b8cb;
+}
+
+.sign-form {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.sign_up {
+    margin: 36px 0px 0px -195px;
+    display: block;
+    font-size: 90px;
+}
+.sign_up_ {
+    margin: 80px 0px -126px -147px;
+    display: block;
+    font-size: 90px;
+}
+
+/* 사번,비밀번호,이름,주소,.... */
+.sign-up-htm .emp_no,
+.sign-up-htm .emp_pw .emp_pw_,
+.sign-up-htm .emp_pw_re .emp_pw_re_,
+.sign-up-htm .emp_name,
+.emp_name_,
+.sign-up-htm .emp_addr .emp_addr_,
+.sign-up-htm .emp_email .emp_email_,
+.sign-up-htm .emp_birth .emp_birth_,
+.sign-up-htm .emp_hiredate .emp_hiredate_,
+.sign-up-htm .Department .Department_ {
+    line-height: 2;
+    color: #d1dddb;
+    font-size: 20px;
+}
+
+.sign-up-htm .emp_no .emp_no_input,
+.sign-up-htm .emp_pw .emp_pw_input,
+.sign-up-htm .emp_pw_re .emp_pw_re_input,
+.sign-up-htm .emp_name .emp_name_input,
+.sign-up-htm .emp_addr .emp_addr_input,
+.sign-up-htm .emp_email .emp_email_input,
+.sign-up-htm .emp_hiredate .emp_hiredate_input,
+.sign-up-htm .Department .Department_input {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, .1);
+    display: block;
+    color: #fff;
+    width: 80%;
+}
+
+/* 생년월일 */
+.sign-up-htm .emp_birth .birth_yy,
+.sign-up-htm .emp_birth .birth_mm,
+.sign-up-htm .emp_birth .birth_dd {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, .1);
+    display: inline-table;
+    color: gray;
+    width: 25%;
+}
+
+
+
+.hr {
+    height: 1px;
+    margin: 37px 0 33px 0;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+
+
+
+/* sign up button */
+.sign-form .sign_up_button {
+    margin-bottom: 10px;
+}
+
+.sign-form .sign_up_button .sign_up_button_ {
+    background-color: #1161ee;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    width: 60%;
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+}
+
+.sign_up_button .sign_up_button_ {
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    height: 48px;
+    text-align: center;
+    margin: 11px 8px 8px 95px;
+}
