@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./eListPop.css">
+</head>
+
+<h2>조직도</h2>
+<div class="list-form">
+  <div class="depart-list list">
+    <details>
+      <summary class="dList-all">
+        부서 목록
+      </summary>
+      <c:forEach items="${dList}" var="dept">
+        <p class="${dept.depNo} dept">${dept.depName}</p>
+      </c:forEach>
+    </details>
+  </div>
+  <div class="employee-list list">
+  </div>
+  <div class="input-box">
+    <input type="button" value="+" onclick="addData();">
+    <input type="button" value="-" onclick="minusData();">
+  </div>
+  <div class="choice-list list">
+    <table>
+      <thead>
+        <tr>
+          <th>사번</th>
+          <th>이름</th>
+        </tr>
+      </thead>
+      <tbody id="choice-emp">
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+
+
+</html>

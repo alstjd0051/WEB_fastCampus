@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sample</title>
+  <title>upmu</title>
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -32,26 +34,49 @@
 
 
 <main class="responsive-wrapper">
-
-
-  <div class="main-menu">
-    <li class="gnb_inner">
-      <div class="item__name">
-        <a href="${pageContext.request.contextPath}/board/boardList.do" class="boardList">게시판</a>
-        <div class="eList">
-          <a href="${pageContext.request.contextPath}/employeeList/eList.do" class="eList_">조직도</a>
-          <input type="button" value="조직도팝업" class="eList__" onclick="eListPop();">
-        </div>
-        <a href="${pageContext.request.contextPath}/document/docMain" class="docMain">전자결재</a>
-        <a href="${pageContext.request.contextPath}/chat/chatRoomList.do" class="chatRoom">채팅</a>
-        <a href="${pageContext.request.contextPath}/mail/sendMailList.do" class="sendMailList">보낸 메일함(테스트용 사번 : 1)</a>
-        <a href="${pageContext.request.contextPath}/mail/receiveMailList.do" class="receiveMailList">받은 메일함(테스트용 사번 :
-          2)</a>
-        <a href="${pageContext.request.contextPath}/admin/eListAdmin.do" class="eListAdmin">관리페이지</a>
-        <a href="${pageContext.request.contextPath}/attendance/attendanceManage.do" class="attendanceManage">근태관리</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0 0 0 20%; margin: auto;">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"
+              href="${pageContext.request.contextPath}/board/boardList.do">게시판</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              조직도
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="${pageContext.request.contextPath}/employeeList/eList.do">페이지이동</a>
+              </li>
+              <li><input value="새창으로이동" onclick="eListPop();" class="dropdown-item" /></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              메일함
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="${pageContext.request.contextPath}/mail/sendMailList.do">보낸 메일함</a>
+              </li>
+              <li><a class="dropdown-item" href="${pageContext.request.contextPath}/mail/receiveMailList.do">받은 메일함</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="${pageContext.request.contextPath}/attendance/attendanceManage.do"
+              tabindex="-1" aria-disabled="true">근태관리</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="${pageContext.request.contextPath}/chat/chatRoomList.do" tabindex="-1"
+              aria-disabled="true">채팅</a>
+          </li>
+        </ul>
       </div>
-    </li>
-  </div>
+    </div>
+  </nav>
 
 
 

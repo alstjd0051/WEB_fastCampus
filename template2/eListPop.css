@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+body{
+	position: fixed;
+	background-color: #f8f3eb;
+  margin: auto;
+  display: block;
+}
+h2 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #c8c8c8;
+	background-color: #E8F5FF;
+	text-align: center;
+	color: #646464;
+}
+.list-form {
+	display: flex;
+}
+.list {
+	outline : solid 1px #c8c8c8;
+	font-family: 'Gothic A1', sans-serif;
+}
+
+.list p {
+	margin: 0px;
+	cursor: pointer;
+}
+.depart-list {
+	position: relative;
+	overflow-x:auto; 
+	width:auto; 
+	height:450px;
+}
+.depart-name {
+	width: 90px;
+}
+.depart-code {
+	width: 55px;
+}
+#depart-enroll {
+	position: absolute;
+	outline : solid 1px #c8c8c8;
+	width:170px; 
+	height:130px;
+	left: 0px;
+	bottom: 0px;
+}
+.employee-list {
+	display: hidden;
+	overflow-x:auto; 
+	width:700px; 
+	height:450px;
+}
+
+summary {
+    cursor: pointer;
+}
+label {
+	display: block;
+}
+
+.search-form{
+	display: flex;
+	margin-left:170px;
+	position: relative;
+}
+.search-form label {
+	margin-right: 5px; 
+}
+#context-menu{
+	border: 1px solid #c8c8c8;
+	background-color: white;
+	margin: 0px;
+	z-index: 9999;
+}
+#context-menu ul li{
+	padding-left: 14px;
+	padding-right: 8px;
+	cursor: default;
+	font-size: 14px;
+}
+#context-menu ul li:hover{
+	background-color: #dcdcdc;
+}
+table {
+	text-align: center;
+}
+th, td {
+	border: 1px solid #c8c8c8;
+}
+th {
+	background-color: #E8F5FF;
+}
+input[type=submit]{
+	border: none;
+}
+
+.dept:hover {
+	background-color: #dcdcdc;
+}
+.dept { 
+	padding-left: 20px;
+}

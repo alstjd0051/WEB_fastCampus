@@ -347,15 +347,15 @@ img {
   padding: 11px 270px 11px 0;
 }
 
-.gnb .gnb_inner .group_nav .list_nav .boardList,
-.gnb .gnb_inner .group_nav .list_nav .eList .eList_,
-.gnb .gnb_inner .group_nav .list_nav .eList  .eList__,
-.gnb .gnb_inner .group_nav .list_nav .docmain,
-.gnb .gnb_inner .group_nav .list_nav .chatroomlist,
-.gnb .gnb_inner .group_nav .list_nav .sendmaillist,
-.gnb .gnb_inner .group_nav .list_nav .receivemaillist,
-.gnb .gnb_inner .group_nav .list_nav .elistAdmin
-.gnb .gnb_inner .group_nav .list_nav .attendanceManage
+.gnb .gnb_inner .group_nav .item__name .boardList,
+.gnb .gnb_inner .group_nav .item__name .eList .eList_,
+.gnb .gnb_inner .group_nav .item__name .eList  .eList__,
+.gnb .gnb_inner .group_nav .item__name .docmain,
+.gnb .gnb_inner .group_nav .item__name .chatroomlist,
+.gnb .gnb_inner .group_nav .item__name .sendmaillist,
+.gnb .gnb_inner .group_nav .item__name .receivemaillist,
+.gnb .gnb_inner .group_nav .item__name .elistAdmin
+.gnb .gnb_inner .group_nav .item__name .attendanceManage
 {
   border-radius: 25px;
   background-color: rgb(194, 133, 133);
