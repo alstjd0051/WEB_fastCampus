@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,7 @@
 <script src="/main.77bb5cfd.js"></script></head>
 
 <body>
+
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
       Dropdown button
@@ -21,9 +22,34 @@
       <li><a class="dropdown-item" href="#">Something else here</a></li>
     </ul>
   </div>
+
   <!-- loading -->
   <div class="spinner-border text-secondary" role="status">
     <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          멋지십니다.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">노농</button>
+          <button type="button" class="btn btn-primary">예쓰</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
