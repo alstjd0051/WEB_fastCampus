@@ -1,0 +1,17 @@
+{
+  "name": "asd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mypage.js",
+  "scripts": {
+    "dev": "parcel mainp.html",
+    "build": "parcel build mainp.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.35.1"
+  }
+}

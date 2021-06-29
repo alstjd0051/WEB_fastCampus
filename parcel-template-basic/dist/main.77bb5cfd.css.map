@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss\\main.scss"],"names":[],"mappings":"AAGA;EACE,sBAJa;;AAKb;EACE,WALW;EAMX,aAAA","file":"main.77bb5cfd.css","sourceRoot":"..","sourcesContent":["$color--black: #000;\r\n$color--white: #fff;\r\n\r\nbody {\r\n  background-color: $color--black;\r\n  h1 {\r\n    color: $color--white;\r\n    display: flex;\r\n  }\r\n}"]}
