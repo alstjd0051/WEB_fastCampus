@@ -1,3 +1,5 @@
+"use strict";
+var _a;
 /**
  * Symbol
  * - ECMAScript 2015의 Symbol 입니다.
@@ -17,10 +19,8 @@ console.log(Symbol("foo") === Symbol("foo"));
 //   [sym]: "value"
 // };
 // console.log(obj[sym]); //"value"
-
-const sym = Symbol();
-const obj = {
-  [sym]: "value",
-};
-
-obj[sym]
+var sym = Symbol();
+var obj = (_a = {},
+    _a[sym] = "value",
+    _a);
+obj[sym];

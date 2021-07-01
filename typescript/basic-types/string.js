@@ -15,5 +15,5 @@
 // let sentence: string = "hello, my name is" + fullName + ".\n\n" + "I'll be" + (age+1) + "years old next month";
 var fullName = 'miiin_sseong';
 var age = 26;
-var sentence = "Hello, my name is " + fullName + ".\n\nI'll be " + (age + 1) + " years old next month.";
+var sentence = "Hello, my name is " + fullName + ".\nI'll be " + (age + 1) + " years old next month.";
 console.log(sentence);
