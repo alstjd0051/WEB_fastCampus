@@ -21,6 +21,7 @@
       state = {
         age: 26,
       };
+      interval = null;
       constructor(props) {
         super(props);
 
@@ -40,10 +41,32 @@
       componentDidMount() {
         console.log('componentDidMount');
 
-        setInterval(() => {
+        this.interval = setInterval(() => {
           // console.log("setInterval");
           this.setState(state => ({ ...state, age: state.age + 1 }));
         }, 1000);
+      }
+
+      componentWillReceiveProps(nextProps) {
+        console.log('componentWillReceiveProps', nextProps);
+      }
+
+      shouldComponentUpdate(nextProps, nextState) {
+        console.log('shouldComponentUpdate', nextProps, nextState);
+
+        return true;
+      }
+
+      componentWillUpdate(nextProps, nextState) {
+        console.log('componentWillUpdate', nextProps, nextState);
+      }
+
+      componentDidUpdate(prevProps, prevState) {
+        console.log('componentDidUpdate', prevProps, prevState);
+      }
+
+      componentWillUnmount() {
+        clearInterval(this.interval);//setInterval의 리턴
       }
     }
 
