@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Component Lifecycle</title>
+  <title>ComponentLifecycle</title>
 </head>
 
 <body>
@@ -14,10 +14,40 @@
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-
     console.log(React);
     console.log(ReactDOM);
 
+    class App extends React.Component {
+      state = {
+        age: 26,
+      };
+      constructor(props) {
+        super(props);
+
+        console.log("constructor", props);
+      }
+      render() {
+        console.log('render');
+        return (
+          <div>
+            <h2>Hello {this.props.name} - {this.state.age}</h2>
+          </div>
+        );
+      }
+      componentWillMount() {
+        console.log('componentWillMount');
+      }
+      componentDidMount() {
+        console.log('componentDidMount');
+
+        setInterval(() => {
+          // console.log("setInterval");
+          this.setState(state => ({ ...state, age: state.age + 1 }));
+        }, 1000);
+      }
+    }
+
+    ReactDOM.render(<App name="miiin_sseong" />, document.querySelector("#root"))
   </script>
 </body>
 
