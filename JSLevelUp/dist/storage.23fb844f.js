@@ -117,11 +117,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"배열.js":[function(require,module,exports) {
-var number = [1, 2, 3, 4];
-var fruits = ['Apple', 'Banana', 'Cherry'];
-console.log(number[1]);
-console.log(fruits[2]);
+})({"storage.js":[function(require,module,exports) {
+
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -150,7 +147,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "3335" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -326,5 +323,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","배열.js"], null)
-//# sourceMappingURL=/배열.d6e98ab3.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","storage.js"], null)
+//# sourceMappingURL=/storage.23fb844f.js.map
