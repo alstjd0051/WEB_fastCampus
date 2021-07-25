@@ -23,8 +23,9 @@ const user = {
 }
 const keys = Object.keys(user)
 console.log(keys)
+// ['name', 'age', 'email']
 
-console.log(user['email'])
+console.log(user['email']) //indexing
 
 const values = keys.map(key => user[key])
 console.log(values)
