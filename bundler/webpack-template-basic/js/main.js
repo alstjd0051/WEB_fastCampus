@@ -1,1 +1,4 @@
-console.log('Webpack')
+import '../scss/main.scss'
+
+
+console.log("Webpack");
